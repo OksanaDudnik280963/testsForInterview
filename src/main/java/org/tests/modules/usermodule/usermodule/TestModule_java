@@ -1,0 +1,13 @@
+package org.tests.modules.usermodule.usermodule;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class TestModule {
+    private TestModule() {
+    }
+
+    public static void sayHello() {
+        log.info("Hello from HelloWorldApp");
+    }
+}

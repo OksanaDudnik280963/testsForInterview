@@ -1,0 +1,31 @@
+package org.tests.generics;
+
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+@Slf4j
+public class EvenOddSumCalculator {
+  public static < T extends Number > void calculateNumberSum(List < T > numbers) {
+    double evenSum = 0;
+    double oddSum = 0;
+
+    for (T number: numbers) {
+      if (number.doubleValue() % 2 == 0) {
+        evenSum += number.doubleValue();
+      } else {
+        oddSum += number.doubleValue();
+      }
+    }
+    log.info("\nOriginal list of numbers: " + numbers);
+    log.info("Sum of even numbers: " + evenSum);
+    log.info("Sum of odd numbers: " + oddSum);
+  }
+
+  public static void main(String[] args) {
+    List < Integer > integers = List.of(1, 2, 3, 4, 5, 6, 7);
+    List < Double > doubles = List.of(2.0, 1.5, 4.5, 2.5, 1.5);
+
+    calculateNumberSum(integers);
+    calculateNumberSum(doubles);
+  }
+}

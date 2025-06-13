@@ -1,0 +1,6 @@
+module usermodule {
+    requires java.logging;
+    requires static lombok;
+
+    exports org.tests.modules.usermodule.usermodule;
+}
