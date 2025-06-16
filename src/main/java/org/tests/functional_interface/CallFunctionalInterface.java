@@ -15,5 +15,6 @@ public class CallFunctionalInterface {
         log.info(String.valueOf(result.multiply(x, y)));
     }
 
+
 }
 

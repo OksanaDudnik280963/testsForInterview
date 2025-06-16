@@ -4,6 +4,7 @@ import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.DoubleStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
@@ -58,6 +59,16 @@ public class FlatMapper {
                 consumer.accept(number + "a");
                 consumer.accept(number + "b");
             }).forEach(System.out::println);
+            //=========================
+            Stream.of("1,2", "3,4").mapMultiToInt((s, consumer) -> {
+                Arrays.stream(s.split(",")).mapToInt(Integer::parseInt).forEach(consumer);
+            }).forEach(System.out::println);
+            //================================
+            Stream.of("10000000000,20000000000").mapMultiToLong((s, consumer) -> {
+                Arrays.stream(s.split(",")).mapToLong(Long::parseLong).forEach(consumer);
+            }).forEach(System.out::println);
+            //==================================
+
         }
 
     }
