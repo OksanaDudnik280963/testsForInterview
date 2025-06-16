@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.function.Predicate;
 
 class Geeks {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         // create a list of strings
         List<String> n = Arrays.asList(
