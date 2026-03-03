@@ -10,12 +10,18 @@ import static org.tests.functional_interface.CallFunctionalInterface.call;
 import static org.tests.modules.streams.JobStream.*;
 import static org.tests.odd.OddNumbers.printOddResults;
 import static org.tests.prime.PrimeNumberCheck.isPrime;
+import static org.tests.streams.FlatMapper.Order.examplesFlatMap;
+
 @Slf4j
 public class Main {
 
     public static void main(String[] args) {
         log.info("Hello World!");
+
         testGrouping();//grouping
+        testSmallestLargestDigit();//smallest largest digit
+        examplesFlatMap();
+        printOddResults();//odd
         StringToLine.main(null);
         //prime
         log.info(isPrime(19)); // true

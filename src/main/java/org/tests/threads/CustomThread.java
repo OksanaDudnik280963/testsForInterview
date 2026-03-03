@@ -15,7 +15,6 @@ public class CustomThread extends Thread {
     public void run() {
         log.info(this.threadName + " - begin");
         try {
-
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

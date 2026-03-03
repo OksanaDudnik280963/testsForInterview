@@ -27,7 +27,7 @@ public class FlatMapper {
     }
 
     @Getter
-    static class Order {
+    public static class Order {
         List<Product> products;
         double totalPrice;
 
@@ -42,7 +42,7 @@ public class FlatMapper {
             }
         }
 
-        private static void examplesFlatMap() {
+        public static void examplesFlatMap() {
             Stream<String> strings = Stream.of("10000000000,20000000000", "30000000000");
             LongStream longStream = strings.flatMapToLong(s -> Arrays.stream(s.split(","))
                     .mapToLong(Long::parseLong));
@@ -73,6 +73,6 @@ public class FlatMapper {
 
     }
 
-    record Product(String name, int price) {
+    public record Product(String name, int price) {
     }
 }
