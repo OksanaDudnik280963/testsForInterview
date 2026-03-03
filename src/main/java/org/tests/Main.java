@@ -1,6 +1,7 @@
 package org.tests;
 
 import lombok.extern.slf4j.Slf4j;
+import org.tests.modules.streams.StringToLine;
 import org.tests.threads.CustomThread;
 
 import static org.tests.fibonacci.PrintFibonacci.printFibonacciSequence;
@@ -14,6 +15,8 @@ public class Main {
 
     public static void main(String[] args) {
         log.info("Hello World!");
+        testGrouping();//grouping
+        StringToLine.main(null);
         //prime
         log.info(isPrime(19)); // true
         log.info(isPrime(49)); // false

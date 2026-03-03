@@ -12,9 +12,9 @@ public class Test {
         float x = 451.3256412f;
 
         int decimalPlace = 4;
-        BigDecimal bdNum = new BigDecimal(Float.toString(x));
-        bdNum.setScale(decimalPlace, RoundingMode.HALF_UP);
+        BigDecimal bigDecimal = new BigDecimal(Float.toString(x));
+        bigDecimal = bigDecimal.setScale(decimalPlace, RoundingMode.HALF_UP);
         log.info(String.format("Original number: %.7f \n", x));
-        log.info("Rounded upto 4 decimal: " + bdNum);
+        log.info("Rounded upto 4 decimal: " + bigDecimal);
     }
 }
